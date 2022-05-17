@@ -1,5 +1,5 @@
 ## What it does
-- Downloads selected MDK from [forge]("https://files.minecraftforge.net/")
+- Downloads selected MDK from [forge](https://files.minecraftforge.net)
 - Edits base MDK to the project info (`mods.toml` , `ExampleMod.java` , domain)
 
 ## Why did you make this
