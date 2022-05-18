@@ -3,8 +3,6 @@ from tkinter import *
 from project import *
 from forge import *
 
-#TODO: Fix getting values from the Entries
-
 root = Tk()
 
 promo_val = IntVar(root, 1)
