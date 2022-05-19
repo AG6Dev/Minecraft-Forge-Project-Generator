@@ -15,7 +15,7 @@ def downloadForgeZip(info=ProjectInfo) -> str:
 
     data = req.get(base_url)
 
-    with open(os.getcwd()+"\\temp.zip", mode='wb') as file:
+    with open(os.getcwd()+"\\{projname}.zip".format(projname=info.name), mode='wb') as file:
         file.write(data.content)
         return os.path.realpath(file.name)
 
