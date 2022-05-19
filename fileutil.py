@@ -6,8 +6,6 @@ import shutil
 def checkAndDeleteFile(path=str) -> bool:
     if os.path.exists(path) == True:
         os.remove(path)
-    else:
-        pass
 
     
 def unzipFileAtPath(path_to_file=str) -> str:
