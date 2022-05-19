@@ -2,6 +2,7 @@ from time import sleep
 from tkinter import *
 from project import *
 from forge import *
+from fileutil import *
 
 root = Tk()
 
@@ -13,6 +14,9 @@ def startGeneration(info = ProjectInfo):
     zippath = downloadForgeZip(info)
     sleep(1)
     unzipFileAtPath(zippath)
+    createNewDomain(info)
+
+    
 
 def createWindow():
     root.title("Project Generator")
@@ -92,7 +96,7 @@ def createWindow():
             radio_dict.get(str(promo_val.get())),
             name=modname_in.get(), modid=modid_in.get(), author=author_in.get(), license=license_in.get(), description=description_in.get(), domain=domain_in.get()
         )
-        ), text="Generate!")
+    ), text="Generate!")
     generate_button.pack()
 
     root.mainloop()
