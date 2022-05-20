@@ -15,6 +15,7 @@ def startGeneration(info = ProjectInfo):
     sleep(1)
     unzipFileAtPath(zippath)
     createNewDomain(info)
+    changeTomlInfo(info)
 
     
 

@@ -24,7 +24,7 @@ def convertDomainToFilePath(info=ProjectInfo) -> str:
         basestr = basestr + i + "\\"
     return basestr
 
-def createNewDomain(info=ProjectInfo) -> str:
+def createNewDomain(info=ProjectInfo):
         oldmodloc = os.getcwd() + "\\" + info.name +"\\src\\main\\java\\com\\example\\examplemod\\ExampleMod.java"
         newmodloc = os.getcwd() + "\\" + info.name + "\\src\\main\\java\\" + convertDomainToFilePath(info)
         dirtodel = os.getcwd() + "\\" + info.name + "\\src\\main\\java\\com"

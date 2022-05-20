@@ -1,3 +1,7 @@
+import os
+from toml import *
+import toml
+
 class ProjectInfo:
     name = "Example Mod"
     modid = "examplemod"
@@ -13,10 +17,24 @@ class ProjectInfo:
         self.modid = kwargs.get("modid")
         self.author = kwargs.get("author")
         self.license = kwargs.get("license")
-        self.descrption = kwargs.get("description")
+        self.description = kwargs.get("description")
         self.domain = kwargs.get("domain")
         self.game_ver = mc_ver
         self.promo = promo_type.lower()
 
+def changeTomlInfo(info = ProjectInfo):
+    tomlloc = os.getcwd() + "\\" + info.name + "\\src\\main\\resources\\META-INF\\mods.toml"
+    
+    data = toml.load(tomlloc)
+    modinfo = dict(data['mods'][0])
 
+    data['license'] = info.license
+    data['mods'][0]["modId"] = info.modid
+    data['mods'][0]["displayName"] = info.name
+    data['mods'][0]["authors"] = info.author
+    data['mods'][0]["description"] = info.description
+    
+    towrite = toml.dumps(data)
 
+    with open(tomlloc, mode='w') as file:
+        file.write(towrite)
