@@ -27,7 +27,7 @@ def startGeneration(info=ProjectInfo):
 
 def createWindow():
     root.title("Project Generator")
-    root.iconbitmap("app.ico")
+    #root.iconbitmap("app.ico")
     root.geometry('350x350')
     root.resizable(False, True)
 
