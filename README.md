@@ -11,3 +11,5 @@ Boredom and fed up of having to do setup myself 😬
 
 ### Other:
 - Found an issue? Report it onto the issue tracker and I'll get round to it eventually.
+
+- Other questions or concerns? Contact me via Discord (AG6#9462)
