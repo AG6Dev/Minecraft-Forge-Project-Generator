@@ -8,3 +8,6 @@ Boredom and fed up of having to do setup myself 😬
 - Fabric possibly?
 - Parchment Support
 - IDE setup commands auto ran
+
+### Other:
+- Found an issue? Report it onto the issue tracker and I'll get round to it eventually.
